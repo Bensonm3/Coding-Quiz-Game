@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Quiz Game</title>
+</head>
+<body>
+        <!-- calling audio files -->
+        <audio id="cantinaMusic">
+            <source src="sounds/cantina.mp3" type="audio/mp3">
+        </audio>
+        <audio id="wrongBuzzer">
+                <source src="sounds/wrong.mp3" type="audio/mp3">
+            </audio>
+        <audio id="endBuzzer">
+                <source src="sounds/end.mp3" type="audio/mp3">
+            </audio>
+        <audio id="correctBuzzer">
+                <source src="sounds/correct.mp3" type="audio/mp3">
+            </audio>
+<!-- Page contents -->
+    <div class="row border">
+        <div class="col-md-3 border">
+            <div class="border" id="image" style ="display: none">
+            </div>
+        </div>
+        <!-- Quiz container Box -->
+        <div id = "quizcontainer" class = "col-md-6 border" >
+            <h1 id = "title">Coding Acronym Quiz</h1>
+                <button id = "start">Start Quiz!</button>
+                
+            <div id="question" style ="display: none">
+            </div>
+            <div id="choices" style ="display: none">
+                <div class="choice border" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice border" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice border" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice border" id="D" onclick="checkAnswer('D')"></div>
+
+
+            </div>
+            <div id = "results" style="display: none">
+            </div>
+            <form id = "initialsBox">
+                <input id = "highScoreName" type="text" name="Enter Initials" value="Your Initials Here" style="display: none">
+            </form>
+            <button id="addScoreBtn" onclick="addScore(); viewScores()" style ="display: none">Add Score</button>
+        </div>
+        
+        
+        <div class="col-md-3 border">
+                <div class="choice" id="highScoreLink" onclick="viewScores()">High Scores</div>
+                
+                <div id="countdown"></div>
+                </div>
+                
+   
+</div>
+        <style>
+            #highScoreLink{
+                text-align: center;
+            }
+            
+            img{
+                width: 100%;
+            }.choice{
+                background-color: rgba(228, 123, 105, 0.856);
+            }
+            .choice:hover{
+                background-color: limegreen;
+            }
+            #A #B #C #D:active{
+                background-color: purple;
+            }
+            #countdown{
+                height: 40px;
+                width: 150px;
+                font-size: 20px;
+                background-color: pink;
+                display: none;
+                position: relative;
+                right: 0px;
+            }
+           button:hover{
+               background-color: limegreen;
+           }
+           button:active{
+               background-color: purple;
+           }
+
+        </style>
+    <script type="text/javascript" src="script.js"></script>
+    
+</body>
+</html>
