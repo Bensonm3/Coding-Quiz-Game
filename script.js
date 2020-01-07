@@ -18,6 +18,7 @@ const initialsBox = document.getElementById("initialsBox");
 const submitHighScore = document.getElementById("submitHighScore");
 const highScoreName = document.getElementById("highScoreName");
 const addScoreBtn = document.getElementById("addScoreBtn");
+const answerLight = document.getElementById("answerLight");
 
 
 
@@ -122,6 +123,7 @@ Count = function(){
     choices.style.display = "block";
     image.style.display = "block";
     initialsBox.style.display = "none";
+    answerLight.style.display = "block";
 var Timer = setInterval(function(){
   countdown.innerHTML = "Time Left: " + timeleft;
   timeleft -= 1;
@@ -161,32 +163,34 @@ function checkAnswer(answer){
 // answer is right function
   function answerIsCorrect(){
     correctBuzzer.play();
-    quizcontainer.style.backgroundColor = "green";
+    answerLight.style.backgroundColor = "green";
 }
 
 // answer is wrong function
 function answerIsWrong(){
       wrongBuzzer.play();
-      quizcontainer.style.backgroundColor = "red";
+      answerLight.style.backgroundColor = "red";
       timeleft = timeleft - 15;
 }
 }
 
 // function hides the question, choices, and countdown while displaying the results.
 function scoreRender(){
-choices.style.display = "none";
-countdown.style.display = "none";
-question.style.display = "none";
-results.style.display = "block";
-addScoreBtn.style.display = "block";
-initialsBox.style.display = "block";
-highScoreName.style.display ="block";
+  answerLight.style.display = "none";
+  choices.style.display = "none";
+  countdown.style.display = "none";
+  question.style.display = "none";
+  results.style.display = "block";
+  addScoreBtn.style.display = "block";
+  initialsBox.style.display = "block";
+  highScoreName.style.display ="block";
 // checks for star wars answers, if the user selected all 5 they get a special result!
 if(starWarsScore == questions.length){
   cantinaMusic.play();
-  results.innerHTML = "<p> May the force be with you, because coding acronyms certainly are not.</p> <br> <p>Score: 0%</p>";
+  results.innerHTML = "<p> May the force be with you, because coding acronyms certainly are not.</p> <br> <p>Score: 0</p>";
   timeleft = "A";
   image.innerHTML = "<img src=images/starwars.gif>";
+  question.innerHTML = 0;
   
 }
 // if user did not select all 5 star wars answers then they get the standard result
@@ -217,7 +221,8 @@ else if(calculatedScore <= 70 && calculatedScore >= 30){
 function viewScores(){
   addScoreBtn.style.display = "none";
   highScoreName.style.display ="none";
-  question.innerHTML = "<p> High Scores </p>";
+  start.style.display ="none";
+  question.innerHTML = "<p> Ranked Scores </p>";
   question.style.display = "block";
   var retrievedData = localStorage.getItem("highScores");
   var data = JSON.parse(retrievedData);
@@ -253,7 +258,7 @@ function addScore() {
 
 
 
-
+// old code I'm hanging onto because I'm superstitious
 // function addEntry() {
 //   // Parse any JSON previously stored in allEntries
 //   var existingEntries = JSON.parse(localStorage.getItem("allEntries"));

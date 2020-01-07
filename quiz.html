@@ -22,9 +22,9 @@
                 <source src="sounds/correct.mp3" type="audio/mp3">
             </audio>
 <!-- Page contents -->
-    <div class="row border">
-        <div class="col-md-3 border">
-            <div class="border" id="image" style ="display: none">
+    <div class="row">
+        <div class="col-md-3">
+            <div id="image" style ="display: none">
             </div>
         </div>
         <!-- Quiz container Box -->
@@ -45,21 +45,36 @@
             <div id = "results" style="display: none">
             </div>
             <form id = "initialsBox">
-                <input id = "highScoreName" type="text" name="Enter Initials" value="Your Initials Here" style="display: none">
+                <input id = "highScoreName" type="text" name="Enter Initials" value="Your Name Here" style="display: none">
             </form>
             <button id="addScoreBtn" onclick="addScore(); viewScores()" style ="display: none">Add Score</button>
         </div>
         
         
-        <div class="col-md-3 border">
+        <div class="col-md-3">
                 <div class="choice" id="highScoreLink" onclick="viewScores()">High Scores</div>
                 
                 <div id="countdown"></div>
+                <br>
+                <div class="border" id="answerLight">?</div>
                 </div>
                 
    
 </div>
         <style>
+            body{
+                background-color: grey;
+            }
+            #quizcontainer{
+                background-color: antiquewhite;
+            }
+            #answerLight{
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                display: none;
+                text-align: center;
+            }
             #highScoreLink{
                 text-align: center;
             }
@@ -77,7 +92,7 @@
             }
             #countdown{
                 height: 40px;
-                width: 150px;
+                width: 183px;
                 font-size: 20px;
                 background-color: pink;
                 display: none;
