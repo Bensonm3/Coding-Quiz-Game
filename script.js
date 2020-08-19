@@ -20,9 +20,6 @@ const highScoreName = document.getElementById("highScoreName");
 const addScoreBtn = document.getElementById("addScoreBtn");
 const answerLight = document.getElementById("answerLight");
 
-
-
-
 var questions = [
     {
       title: "What does the acronym JSON stand for?",
@@ -76,11 +73,7 @@ var questions = [
     }
 
   ];
-  
-
-
 // Variable definitions
-
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 const quizTime = 75;
