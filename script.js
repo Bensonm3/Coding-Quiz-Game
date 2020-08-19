@@ -242,10 +242,8 @@ function addScore() {
   highScores.push(newScore);
   var sortedScores = highScores.sort(function(a, b){
     return b.Score - a.Score
-    console.log(sortedScores);
   });
   localStorage.setItem("highScores", JSON.stringify(sortedScores));
-  console.log(sortedScores);
   function viewScores(){}
 }
 
