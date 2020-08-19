@@ -36,7 +36,7 @@ How to Play:
 	
 	
 
-![alt text](https://github.com/Bensonm3/Day-Planner/blob/master/Screen%20Shot%202020-08-12%20at%205.38.24%20PM.png)
+![alt text](https://github.com/Bensonm3/Coding-Quiz-Game/blob/master/Screen%20Shot%202020-08-18%20at%2010.09.10%20PM.png)
 
-Deployed URL:
+Deployed URL: https://bensonm3.github.io/Coding-Quiz-Game/
 	
