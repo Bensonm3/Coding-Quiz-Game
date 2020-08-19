@@ -126,19 +126,19 @@ var Timer = setInterval(function(){
   }
 }, 1000);
 };
-// Check the user input compared to the correct answer
 function checkAnswer(answer){
+  // Check to see if the answer is Star Wars
   if(answer == questions[currentQuestion]["starwars"]){
     starWarsScore++;
     timeleft = timeleft + 5;
     answerIsWrong();
   }
+  // Check the user input compared to the correct answer
   else if( answer == questions[currentQuestion]["answer"]){
       score++;
       answerIsCorrect();
   }
-  // Check to see if the answer is Star Wars
-
+  
   // Remaining options are incorrect
   else{
       answerIsWrong();
@@ -154,17 +154,17 @@ function checkAnswer(answer){
       scoreRender();
   }
 // answer is right function
-  function answerIsCorrect(){
-    correctBuzzer.play();
-    answerLight.style.backgroundColor = "green";
-}
+    function answerIsCorrect(){
+      correctBuzzer.play();
+      answerLight.style.backgroundColor = "green";
+  }
 
 // answer is wrong function
-function answerIsWrong(){
-      wrongBuzzer.play();
-      answerLight.style.backgroundColor = "red";
-      timeleft = timeleft - 15;
-}
+  function answerIsWrong(){
+        wrongBuzzer.play();
+        answerLight.style.backgroundColor = "red";
+        timeleft = timeleft - 15;
+  }
 }
 
 // function hides the question, choices, and countdown while displaying the results.
@@ -250,43 +250,4 @@ function addScore() {
 }
 
 
-
-// old code I'm hanging onto because I'm superstitious
-// function addEntry() {
-//   // Parse any JSON previously stored in allEntries
-//   var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
-//   if(existingEntries == null) existingEntries = [];
-//   var entryTitle = document.getElementById("entryTitle").value;
-//   var entryText = document.getElementById("entryText").value;
-//   var entry = {
-//       "title": entryTitle,
-//       "text": entryText
-//   };
-//   localStorage.setItem("entry", JSON.stringify(entry));
-//   // Save allEntries back to local storage
-//   existingEntries.push(entry);
-//   localStorage.setItem("allEntries", JSON.stringify(existingEntries));
-// };
-
-//   const highScores = []
-//   if (localStorage.getItem("highScores") === null) {
-//     const highScores = []
-//   }
-//   else {
-//     const highScores = JSON.parse(localStorage.getItem("highScores"))
-//   }
-//   const maxHighScores = 10;
-//   const newScore = {'name':highScoreName.value, 'score':calculatedScore};
-//   localStorage.setItem('newScore', JSON.stringify(newScore));
-//   highScores.push(newScore);
-//   localStorage.setItem('highScores', JSON.stringify(highScores));
-//   // highScores.sort((a, b) => b.score -a.score);
-  
-//   console.log(highScores); //replace console.log with display highscores
-
-// }
-// function displayScores(){
-//   question.style.display = "block";
-//   question.innerHTML = highscores;
-// }
 
