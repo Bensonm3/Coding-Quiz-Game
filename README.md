@@ -1,5 +1,4 @@
-# hw4
-Quiz Game
+Javsascript Coding Acronym Quiz Game
 
 Objective:
 	To test the users knowledge of common coding acronyms.
@@ -23,10 +22,9 @@ How to Play:
 		red.
 			Incorrect answers will also result in a time penalty.
 	After answering all questions, you will receive a score out of 100.
-		This score is based on the number of answered questions.
+		This score is based on the number of answered questions answered correctly, and also factors in how much time was taken. A maximum deduction of 10 points is possible depending on how long it took the user to complete the quiz.
 		An emoji image will appear based on your score (green = good, yellow = ok, red = 
 		bad).
-		Amount of time taken will result in a maximum deduction of 10 points.
 			If the user runs out of time, the score will render.
 	User will be prompted to enter their name.
 	Upon clicking "Add Score" the users score will be added to the score list.
