@@ -10,12 +10,13 @@ Features:
 	Secret ending based on the user choosing the "correct" incorrect answers.
 
 Technologies Used:
-Javascript
-HTML
-CSS
-	
-	
 
+	Javascript
+
+	HTML
+	
+	CSS
+	
 How to Play:
 	Load up the quiz.html file on your browser
 	Click "Start Quiz!" whenever you are ready to begin
