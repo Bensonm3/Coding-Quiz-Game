@@ -19,7 +19,6 @@ const submitHighScore = document.getElementById("submitHighScore");
 const highScoreName = document.getElementById("highScoreName");
 const addScoreBtn = document.getElementById("addScoreBtn");
 const answerLight = document.getElementById("answerLight");
-
 var questions = [
     {
       title: "What does the acronym JSON stand for?",
@@ -75,14 +74,11 @@ var questions = [
 // Variable definitions
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
-const quizTime = 75;
-var timeleft = 75;
+const quizTime = questions.length * 15;
+var timeleft = questions.length * 15;
 score = 0;
 starWarsScore = 0;
 let Timer;
-
-
-
 // Question Render Function
 function renderQuestion(){
 let q = questions[currentQuestion];
@@ -177,36 +173,35 @@ function scoreRender(){
   initialsBox.style.display = "block";
   highScoreName.style.display ="block";
 // checks for star wars answers, if the user selected all 5 they get a special result!
-if(starWarsScore == questions.length){
-  cantinaMusic.play();
-  results.innerHTML = "<p> May the force be with you, because coding acronyms certainly are not.</p> <br> <p>Score: 0</p>";
-  timeleft = "A";
-  image.innerHTML = "<img src=images/starwars.gif>";
-  question.innerHTML = 0;
-  
-}
-// if user did not select all 5 star wars answers then they get the standard result
-else{
-  const questionscore = Math.round(100 * score/questions.length);
-  var calculatedScore = questionscore - Math.floor((75-timeleft)/75 *10);
-// makes sure the user does not get a negative score
-if(calculatedScore <= 0){
-  calculatedScore = calculatedScore - calculatedScore;
-}
-// determines the result image. green emoji is good, yellow emoji is ok, red emoji is bad
-  results.innerHTML = "<p> Final Score: " + calculatedScore +"<p>";
-  // stores the calculated Score in the question field so it can be retrieved for the high scores list
-  question.innerHTML = calculatedScore;
-  timeleft = "A";
-if(calculatedScore >= 70){
-  image.innerHTML = "<img src=images/greenface.png>";
-}
-else if (calculatedScore <= 30){
-  image.innerHTML = "<img src=images/redface.png>"
-}
-else if(calculatedScore <= 70 && calculatedScore >= 30){
-  image.innerHTML = "<img src=images/yellowface.png>"
+  if(starWarsScore == questions.length){
+    cantinaMusic.play();
+    results.innerHTML = "<p> May the force be with you, because coding acronyms certainly are not.</p> <br> <p>Score: 0</p>";
+    timeleft = "A";
+    image.innerHTML = "<img src=images/starwars.gif>";
+    question.innerHTML = 0;
   }
+// if user did not select all 5 star wars answers then they get the standard result
+  else{
+    const questionscore = Math.round(100 * score/questions.length);
+    var calculatedScore = questionscore - Math.floor((75-timeleft)/75 *10);
+  // makes sure the user does not get a negative score
+      if(calculatedScore <= 0){
+        calculatedScore = calculatedScore - calculatedScore;
+      }
+// determines the result image. green emoji is good, yellow emoji is ok, red emoji is bad
+        results.innerHTML = "<p> Final Score: " + calculatedScore +"<p>";
+        // stores the calculated Score in the question field so it can be retrieved for the high scores list
+        question.innerHTML = calculatedScore;
+        timeleft = "A";
+        if(calculatedScore >= 70){
+          image.innerHTML = "<img src=images/greenface.png>";
+        }
+        else if (calculatedScore <= 30){
+          image.innerHTML = "<img src=images/redface.png>"
+        }
+        else if(calculatedScore <= 70 && calculatedScore >= 30){
+          image.innerHTML = "<img src=images/yellowface.png>"
+        }
   }
 }
 
