@@ -89,21 +89,13 @@ choiceB.innerHTML = "<p>"+ q.choiceB +"</p>";
 choiceC.innerHTML = "<p>"+ q.choiceC +"</p>";
 choiceD.innerHTML = "<p>"+ q.choiceD +"</p>";
 }
-
-
-
-
-
-
 // Start Quiz Function
-
 start.addEventListener("click", quizStart)
 function quizStart(){
     start.style.display = "none";
     renderQuestion();
     Count();
 }
-
 // Timer and question+answer display
 Count = function(){
     countdown.style.display = "block";
@@ -153,7 +145,6 @@ function checkAnswer(answer){
       correctBuzzer.play();
       answerLight.style.backgroundColor = "green";
   }
-
 // answer is wrong function
   function answerIsWrong(){
         wrongBuzzer.play();
@@ -161,7 +152,6 @@ function checkAnswer(answer){
         timeleft = timeleft - 15;
   }
 }
-
 // function hides the question, choices, and countdown while displaying the results.
 function scoreRender(){
   answerLight.style.display = "none";
@@ -204,7 +194,6 @@ function scoreRender(){
         }
   }
 }
-
 function viewScores(){
   addScoreBtn.style.display = "none";
   highScoreName.style.display ="none";
@@ -240,6 +229,3 @@ function addScore() {
   localStorage.setItem("highScores", JSON.stringify(sortedScores));
   function viewScores(){}
 }
-
-
-
