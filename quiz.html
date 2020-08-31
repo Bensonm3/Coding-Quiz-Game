@@ -42,22 +42,24 @@
 
 
             </div>
+            <!-- Results container, by default this is hidden -->
             <div id = "results" style="display: none">
             </div>
+            <!-- HTML for allowing user to add their high score -->
             <form id = "initialsBox">
                 <input id = "highScoreName" type="text" name="Enter Initials" value="Your Name Here" style="display: none">
             </form>
             <button id="addScoreBtn" onclick="addScore(); viewScores()" style ="display: none">Add Score</button>
         </div>
-        
-        
         <div class="col-md-3">
-                <div class="choice" id="highScoreLink" onclick="viewScores()">High Scores</div>
-                
-                <div id="countdown"></div>
-                <br>
-                <div class="border" id="answerLight">?</div>
-                </div>
+            <div class="choice" id="highScoreLink" onclick="viewScores()">High Scores
+            </div>
+            <div id="countdown">
+            </div>
+            <br>
+            <div class="border" id="answerLight">?
+            </div>
+        </div>
                 
    
 </div>
