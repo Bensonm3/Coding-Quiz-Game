@@ -8,6 +8,11 @@ Features:
 	Score based on answers and time taken is recorded in local storage, and shown in a 
 	scores list.
 	Secret ending based on the user choosing the "correct" incorrect answers.
+
+Technologies Used:
+Javascript
+HTML
+CSS
 	
 	
 
@@ -25,7 +30,8 @@ How to Play:
 		This score is based on the number of answered questions answered correctly, and also factors in how much time was taken. A maximum deduction of 10 points is possible depending on how long it took the user to complete the quiz.
 		An emoji image will appear based on your score (green = good, yellow = ok, red = 
 		bad).
-			If the user runs out of time, the score will render.
+		A secret ending is possible in this game, to attain it the user must become one with the force!
+	If the user runs out of time, the score will render.
 	User will be prompted to enter their name.
 	Upon clicking "Add Score" the users score will be added to the score list.
 	Scores will then be displayed in ranked order
