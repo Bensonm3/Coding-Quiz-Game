@@ -8,19 +8,19 @@
     <title>Quiz Game</title>
 </head>
 <body>
-        <!-- calling audio files -->
-        <audio id="cantinaMusic">
-            <source src="sounds/cantina.mp3" type="audio/mp3">
+    <!-- calling audio files -->
+    <audio id="cantinaMusic">
+        <source src="sounds/cantina.mp3" type="audio/mp3">
+    </audio>
+    <audio id="wrongBuzzer">
+            <source src="sounds/wrong.mp3" type="audio/mp3">
         </audio>
-        <audio id="wrongBuzzer">
-                <source src="sounds/wrong.mp3" type="audio/mp3">
-            </audio>
-        <audio id="endBuzzer">
-                <source src="sounds/end.mp3" type="audio/mp3">
-            </audio>
-        <audio id="correctBuzzer">
-                <source src="sounds/correct.mp3" type="audio/mp3">
-            </audio>
+    <audio id="endBuzzer">
+            <source src="sounds/end.mp3" type="audio/mp3">
+        </audio>
+    <audio id="correctBuzzer">
+            <source src="sounds/correct.mp3" type="audio/mp3">
+        </audio>
 <!-- Page contents -->
     <div class="row">
         <div class="col-md-3">
@@ -39,8 +39,6 @@
                 <div class="choice border" id="B" onclick="checkAnswer('B')"></div>
                 <div class="choice border" id="C" onclick="checkAnswer('C')"></div>
                 <div class="choice border" id="D" onclick="checkAnswer('D')"></div>
-
-
             </div>
             <!-- Results container, by default this is hidden -->
             <div id = "results" style="display: none">
@@ -59,10 +57,8 @@
             <br>
             <div class="border" id="answerLight">?
             </div>
-        </div>
-                
-   
-</div>
+        </div> 
+    </div>
         <style>
             body{
                 background-color: grey;
@@ -109,7 +105,6 @@
            }
 
         </style>
-    <script type="text/javascript" src="script.js"></script>
-    
+    <script type="text/javascript" src="script.js"></script>   
 </body>
 </html>
