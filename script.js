@@ -71,7 +71,6 @@ var questions = [
     starwars: "B",
     pic: "images/ajax.png"
     }
-
   ];
 // Variable definitions
 const lastQuestion = questions.length - 1;
