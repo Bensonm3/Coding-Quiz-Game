@@ -4,17 +4,21 @@ Objective:
 	To test the users knowledge of common coding acronyms.
 
 Features:
+	<br/>
 	Responsive to the users input with sounds and object changes (turn on your sound!).
+	<br/>
 	Score based on answers and time taken is recorded in local storage, and shown in a 
 	scores list.
+	<br/>
 	Secret ending based on the user choosing the "correct" incorrect answers.
+	<br/>
 
 Technologies Used:
 
 	Javascript
 
 	HTML
-	
+
 	CSS
 	
 How to Play:
