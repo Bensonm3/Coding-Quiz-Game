@@ -29,9 +29,10 @@
         </div>
         <!-- Quiz container Box -->
         <div id = "quizcontainer" class = "col-md-6 border" >
-            <h1 id = "title">Coding Acronym Quiz</h1>
-                <button id = "start">Start Quiz!</button>
-                
+            <h1 id = "title">Coding Acronym Quiz
+            </h1>
+            <button id = "start">Start Quiz!
+            </button>
             <div id="question" style ="display: none">
             </div>
             <div id="choices" style ="display: none">
@@ -47,7 +48,8 @@
             <form id = "initialsBox">
                 <input id = "highScoreName" type="text" name="Enter Initials" value="Your Name Here" style="display: none">
             </form>
-            <button id="addScoreBtn" onclick="addScore(); viewScores()" style ="display: none">Add Score</button>
+            <button id="addScoreBtn" onclick="addScore(); viewScores()" style ="display: none">Add Score
+            </button>
         </div>
         <div class="col-md-3">
             <div class="choice" id="highScoreLink" onclick="viewScores()">High Scores
@@ -59,52 +61,51 @@
             </div>
         </div> 
     </div>
-        <style>
-            body{
-                background-color: grey;
-            }
-            #quizcontainer{
-                background-color: antiquewhite;
-            }
-            #answerLight{
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                display: none;
-                text-align: center;
-            }
-            #highScoreLink{
-                text-align: center;
-            }
-            
-            img{
-                width: 100%;
-            }.choice{
-                background-color: rgba(228, 123, 105, 0.856);
-            }
-            .choice:hover{
-                background-color: limegreen;
-            }
-            #A #B #C #D:active{
-                background-color: purple;
-            }
-            #countdown{
-                height: 40px;
-                width: 183px;
-                font-size: 20px;
-                background-color: pink;
-                display: none;
-                position: relative;
-                right: 0px;
-            }
-           button:hover{
-               background-color: limegreen;
-           }
-           button:active{
-               background-color: purple;
-           }
-
-        </style>
-    <script type="text/javascript" src="script.js"></script>   
+    <style>
+        body{
+            background-color: grey;
+        }
+        #quizcontainer{
+            background-color: antiquewhite;
+        }
+        #answerLight{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: none;
+            text-align: center;
+        }
+        #highScoreLink{
+            text-align: center;
+        }
+        
+        img{
+            width: 100%;
+        }.choice{
+            background-color: rgba(228, 123, 105, 0.856);
+        }
+        .choice:hover{
+            background-color: limegreen;
+        }
+        #A #B #C #D:active{
+            background-color: purple;
+        }
+        #countdown{
+            height: 40px;
+            width: 183px;
+            font-size: 20px;
+            background-color: pink;
+            display: none;
+            position: relative;
+            right: 0px;
+        }
+        button:hover{
+            background-color: limegreen;
+        }
+        button:active{
+            background-color: purple;
+        }
+    </style>
+<script type="text/javascript" src="script.js"></script>   
 </body>
 </html>
